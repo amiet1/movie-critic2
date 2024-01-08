@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CritiqueCraze</title> 
+    <script type="module" src="./src/component_functions/form.js"></script>
+     <script type="module" src="./src/main.js"></script>
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div class="header">
+      <h1 class="head-title">CritiqueCraze</h1>
+      <p>Embark on a cinematic journey as you handpick your favorite movies, creating a personalized reel of entertainment tailored just for you in our movie app's extensive selection.</p>
+    </div>
+
+ <section class="movies">
+
+  <div class="the-full-form">
+  <form action="" aria-labeled="movie-form">
+      <h2 class="add-movie">Add a Movie</h2>
+
+      <label> Movie Title:
+        <input type="text" name="title" id="title">
+      </label>
+      <label for="critic-audience-score">Critic Score:
+        <input type="text" name="criticScore" id="critic"></label>
+
+        <label for="audience-score">Audience Score:
+          <input type="audience" name="audienceScore" id="audience"></label>
+       
+      <label for="domestic-gross"> Domestic Gross:
+        <input type="text" name="domestic" id="domesticScore"></label>
+     
+
+      <label for="movie-genre">Movie Genre:
+        <select name="genre" id="genre">
+          <option value="" disabled selected> select a genre</option>
+          <option value="Comedy">Comedy</option>
+          <option value="action">Action</option>
+          <option value="adventure">Adventure</option>
+          <option value="Horror">Horror</option>
+      </label>
+    </select>
+    <button id="butt">Submit</button>
+  </form>
+</div>
+  <div>
+    <ul class="movie-list">
+  <!--pulling from js-->  
+    </ul>
+    <button class="default">Default Movies</button>
+  </div>
+
+ 
+  </section>
+  <!-- <div>
+    <canvas id="myChart"></canvas>
+  </div>  -->
+</body>
+//<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</html>

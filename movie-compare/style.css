@@ -1,0 +1,100 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+}
+
+.header{
+  position: fixed;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgb(87, 109, 119);
+  text-align: center;
+  z-index: 1000; 
+  margin:0;
+}
+
+
+body {
+  display: flex;
+  display: column;
+  margin: 150px 0  0;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  gap:1rem;
+  border: 1px solid black
+}
+
+.movie-list {
+  display: flex;
+  overflow: scroll;
+  height: 20rem;
+  width:50rem;
+  border:1px solid black;
+  flex-wrap: wrap;
+  font-size: xx-small;
+  gap: 3rem;
+  justify-content:last baseline;
+  border-radius: 1rem;
+  
+}
+
+.movies {
+display: flex;
+align-items: center;
+gap:2rem;
+justify-content:center;
+
+
+}
+.movie-card {
+  box-shadow: 10px 15px 10px  aquamarine;
+  border-radius: 1rem ;
+  box-sizing: 80px;
+ 
+}
+
+/* .the-full-form { */
+  
+
+
+/* Styling for the submit button */
+.butt {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.butt:hover {
+  background-color: #45a049;
+}
+
+
+.add-movie,.header {
+  font-size: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+  animation: colorChange 4s infinite;
+
+}
+@keyframes colorChange {
+  0% { color: red; }
+  25% { color: orange; }
+  50% { color: yellow; }
+  75% { color: green; }
+  100% { color: blue; }
+}
+
+#title, #critic, #domesticScore, #audience, #genre {
+  font-family: 'Playfair Dispplay', serif;
+
+}
