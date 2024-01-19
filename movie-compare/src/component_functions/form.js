@@ -1,5 +1,5 @@
 import { addMovies } from "./local-storage";
- //import renderMovies from '../main.js'
+ import {renderMovies} from '../main.js';
 
  //extracts data from form
  //adds data to local storage 

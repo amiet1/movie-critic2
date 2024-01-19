@@ -8,14 +8,13 @@ import { getMovies,removeMovie,initMoviesIfEmpty } from './component_functions/l
 //we use this function as a helper function because each time the page refreshes
 // or someone deletes  a movie we wamt to be able to refresh with the same default movies
 export const renderMovies = () => {
-  const ul = document.querySelector('.movie-list')
+const ul = document.querySelector('.movie-list')
+ul.innerHTML = '' // empty list
 
-  ul.innerHTML = '' // empty list
 const movies = getMovies()
-console.log(movies)
+console.log(movies);
   movies.forEach(movie =>{
-    const li = document.createElement('li')   
-    
+    const li = document.createElement('li')    
     li.className = 'movie-card'
     li.innerHTML = `
     <h2 class="movie-title">${movie.title}</h2>
@@ -30,7 +29,7 @@ console.log(movies)
 //should delete  whole li  that  the  button is in
 
 const handleRemoveMovie = (e) => {
-  if (e.target.matches('li')) {  //matches is so that the browser knows that the li is a button
+  if (e.target.classList.matches('movie-card')) {  //matches is so that the browser knows that the li is a button
     const movieTitle = e.target.querySelector('h2').textContent;
     console.log(movieTitle)//grab text content to remove
     removeMovie(movieTitle); // update localStorage
@@ -48,9 +47,9 @@ const handleDefaultClick = ()=>{
 const init = () => {
   // the startup
   //events propagate
-  document.querySelector('form').addEventListener('submit',handleSubmit)
-  initMoviesIfEmpty() //first time user loads, adds movie to local storage
   renderMovies();
+  document.querySelector('.the-full-form').addEventListener('submit',handleSubmit)
+  initMoviesIfEmpty() //first time user loads, adds movie to local storage
   document.querySelector('.movie-list').addEventListener('click', handleRemoveMovie)
   document.querySelector('.default').addEventListener('click', handleDefaultClick)
 
